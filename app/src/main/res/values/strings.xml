@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">SizeBook</string>
+    <string name="add_record">Add Record</string>
+    <string name="view_record">View Record</string>
+    <string name="edit">Edit</string>
+    <string name="finish">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Name</string>
+    <string name="date">Date taken</string>
+    <string name="neck">Neck</string>
+    <string name="bust">Bust</string>
+    <string name="chest">Chest</string>
+    <string name="waist">Waist</string>
+    <string name="hip">Hip</string>
+    <string name="inseam">Inseam</string>
+    <string name="comment">Comment</string>
+    <string name="delete">Delete</string>
 </resources>
