@@ -4,12 +4,96 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <ListView
-        android:id="@+id/displayMeasurments"
+    <TextView
+        android:text="@string/name"
         android:layout_width="match_parent"
-        android:layout_height="339dp"
-        android:layout_weight="0.95"
-        android:background="#eee" />
+        android:layout_height="wrap_content"
+        android:id="@+id/name_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textAlignment="center"
+        android:padding="10dp" />
+
+    <TextView
+        android:text="@string/no_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="@string/no_neck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/neck_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="@string/no_chest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chest_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="@string/no_bust"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bust_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="@string/no_waist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/waist_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="@string/no_hip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hip_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="@string/no_inseam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inseam"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:text="@string/no_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_field"
+        android:layout_weight="0.01"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:layout_margin="8dp" />
+
 
     <Button
         android:text="@string/edit"

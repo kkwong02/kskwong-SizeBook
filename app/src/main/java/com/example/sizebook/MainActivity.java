@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -16,6 +17,8 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -48,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        record_list = (ListView) findViewById(R.id.record_list);
 
         Button newRecord = (Button) findViewById(R.id.add_record);
 
@@ -113,12 +114,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        //FIXME: loading from json file
 
-//        loadRecords();
+        loadRecords();
 
         adapter = new ArrayAdapter<Person>(this, R.layout.record_list_item, records);
+        record_list = (ListView) findViewById(R.id.record_list);
         record_list.setAdapter(adapter);
+
+        // record counter
+        TextView count = (TextView) findViewById(R.id.num_record);
+        count.setText("Number of records: " + Integer.toString(records.size()));
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.

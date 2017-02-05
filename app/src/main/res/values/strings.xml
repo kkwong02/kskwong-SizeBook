@@ -15,4 +15,14 @@
     <string name="inseam">Inseam</string>
     <string name="comment">Comment</string>
     <string name="delete">Delete</string>
+
+
+    <string name="no_date">No date set.</string>
+    <string name="no_neck">No neck measurement set.</string>
+    <string name="no_chest">No chest measurement set.</string>
+    <string name="no_bust">No bust measurement set.</string>
+    <string name="no_waist">No waist measurement set.</string>
+    <string name="no_hip">No hip measurement set.</string>
+    <string name="no_inseam">No inseam measurement set.</string>
+    <string name="no_comment">No comment set.</string>
 </resources>
