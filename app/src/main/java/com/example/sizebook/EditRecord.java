@@ -10,8 +10,8 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 /**
- * Add and edit record have the same layout and same methods. Edit record includes filling in the
- * stored values into the EditText views.
+ * Add and edit record have a very similar layout and same methods. Edit record includes filling
+ * in the stored values into the EditText views. and a delete button.
  */
 public class EditRecord extends AddRecord {
     private ArrayList<Person> records;
@@ -21,7 +21,7 @@ public class EditRecord extends AddRecord {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_record);
+        setContentView(R.layout.activity_edit_record);
 
         Intent intent = getIntent();
         records = (ArrayList<Person>) intent.getSerializableExtra("records");
@@ -66,31 +66,31 @@ public class EditRecord extends AddRecord {
         name.setText(record.getName());
         date.setText(record.getDate());
         
-        if (!record.getNeck().equals(null)) {
+        if (record.getNeck() != null) {
             neck.setText(String.format(num_format, record.getNeck().getSize()));
         }
 
-        if (!record.getBust().equals(null)) {
+        if (record.getBust() != null) {
             bust.setText(String.format(num_format, record.getBust().getSize()));
         }
 
-        if (!record.getChest().equals(null)) {
+        if (record.getChest() != null) {
             chest.setText(String.format(num_format, record.getChest().getSize()));
         }
 
-        if (!record.getWaist().equals(null)) {
+        if (record.getWaist() != null) {
             waist.setText(String.format(num_format, record.getWaist().getSize()));
         }
 
-        if (!record.getHip().equals(null)) {
+        if (record.getHip() != null) {
             hip.setText(String.format(num_format, record.getHip().getSize()));
         }
 
-        if (!record.getInseam().equals(null)) {
+        if (record.getInseam() != null) {
             inseam.setText(String.format(num_format, record.getInseam().getSize()));
         }
 
-        if(!comment.equals(null)){
+        if(comment != null){
             comment.setText(record.getComment());
         }
         

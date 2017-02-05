@@ -5,11 +5,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -52,21 +55,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        record_list = (ListView) findViewById(R.id.record_list);
+
         Button newRecord = (Button) findViewById(R.id.add_record);
 
         newRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRecord(v);
+                addRecord();
             }
         });
+
+        record_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                viewRecord(position);
+            }
+        });
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
 
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    private void addRecord(View view) {
+    private void viewRecord(int pos){
+        Intent intent = new Intent(this, ViewRecord.class);
+        intent.putExtra("index", pos);
+        intent.putExtra("records", records);
+        startActivity(intent);
+    }
+
+    private void addRecord() {
         Intent createRecord = new Intent(this, AddRecord.class);
         createRecord.putExtra("records", records); // pass records array to add
         startActivity(createRecord);
@@ -118,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         loadRecords();
 
         adapter = new ArrayAdapter<Person>(this, R.layout.record_list_item, records);
-        record_list = (ListView) findViewById(R.id.record_list);
+
         record_list.setAdapter(adapter);
 
         // record counter

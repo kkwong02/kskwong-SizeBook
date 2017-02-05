@@ -171,7 +171,7 @@ public class Person implements Serializable {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
         String date_string;
 
-        if (!date.equals(null)){
+        if (date != null){
             date_string= dateFormat.format(date);
         }
         else{

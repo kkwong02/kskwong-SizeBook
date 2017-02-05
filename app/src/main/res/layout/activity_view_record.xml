@@ -1,111 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="1">
 
     <TextView
-        android:text="@string/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/name_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:padding="10dp"
+        android:text="@string/name"
         android:textAlignment="center"
-        android:padding="10dp" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <TextView
-        android:text="@string/no_date"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/date_field"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
+        android:layout_weight="0.01">
 
-    <TextView
-        android:text="@string/no_neck"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/date_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/neck_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_neck"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/chest_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_chest"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/bust_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_bust"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/waist_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_waist"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/hip_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_hip"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/inseam_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_inseam"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/comment_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="0.01"
+                android:text="@string/no_comment"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/neck_field"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
-
-    <TextView
-        android:text="@string/no_chest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/chest_field"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
-
-    <TextView
-        android:text="@string/no_bust"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bust_field"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
-
-    <TextView
-        android:text="@string/no_waist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/waist_field"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
-
-    <TextView
-        android:text="@string/no_hip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/hip_field"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
-
-    <TextView
-        android:text="@string/no_inseam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/inseam"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
-
-    <TextView
-        android:text="@string/no_comment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/comment_field"
-        android:layout_weight="0.01"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        android:layout_margin="8dp" />
-
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
 
     <Button
-        android:text="@string/edit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/edit"
-        android:layout_weight="0.01" />
-
-    <Button
-        android:text="@string/delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/delete"
-        android:layout_weight="0.01" />
+        android:layout_weight="0.01"
+        android:text="@string/edit" />
+
+
+
 </LinearLayout>
