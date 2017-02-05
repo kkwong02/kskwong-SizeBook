@@ -12,7 +12,7 @@
         android:layout_marginTop="11dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/name" />
+        android:hint="@string/name" />
     <!--date-->
     <EditText
         android:id="@+id/date"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="date"
-        android:text="@string/date" />
+        android:hint="@string/date" />
 
     <!--neck-->
     <EditText
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/neck" />
+        android:hint="@string/neck" />
 
     <!--bust-->
     <EditText
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/bust" />
+        android:hint="@string/bust" />
 
     <!--chest-->
     <EditText
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/chest" />
+        android:hint="@string/chest" />
 
     <!--waist-->
     <EditText
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/waist" />
+        android:hint="@string/waist" />
 
     <!--hip-->
     <EditText
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/hip" />
+        android:hint="@string/hip" />
 
     <!--inseam-->
     <EditText
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/inseam" />
+        android:hint="@string/inseam" />
 
     <!--comments-->
     <EditText
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/comment" />
+        android:hint="@string/comment" />
 
 
     <Button
