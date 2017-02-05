@@ -81,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
             // 01-26
-            records = gson.fromJson(in, new TypeToken<ArrayList<Person>>() {
-            }.getType());
+            records = gson.fromJson(in, new TypeToken<ArrayList<Person>>(){}.getType());
 
             fis.close();
         } catch (FileNotFoundException e) {

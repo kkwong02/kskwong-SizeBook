@@ -6,7 +6,7 @@
     <string name="finish">Add</string>
     <string name="cancel">Cancel</string>
     <string name="name">Name</string>
-    <string name="date">Date taken</string>
+    <string name="date">Date taken (yyyy-mm-dd) </string>
     <string name="neck">Neck</string>
     <string name="bust">Bust</string>
     <string name="chest">Chest</string>
