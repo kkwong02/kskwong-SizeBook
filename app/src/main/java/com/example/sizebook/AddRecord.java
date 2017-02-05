@@ -54,7 +54,7 @@ public class AddRecord extends AppCompatActivity {
         });
     }
 
-    private Person readInputFields(String name){
+    public Person readInputFields(String name){
         Person record = new Person(name);
 
         // getting all the text from all the EditTexts
@@ -87,6 +87,7 @@ public class AddRecord extends AppCompatActivity {
                 return null;
             }
         }
+        String regex = "[0-9]*\\.?[05]";
         // neck
         if (!neck.getText().toString().equals("")){
             Measurement neck_dim = new Measurement(Float.parseFloat(neck.getText().toString()));
@@ -132,7 +133,7 @@ public class AddRecord extends AppCompatActivity {
     }
 
     // save new record to file
-    private void saveRecords() {
+    public void saveRecords() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
 

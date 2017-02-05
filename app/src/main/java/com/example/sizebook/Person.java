@@ -1,6 +1,7 @@
 package com.example.sizebook;
 
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -166,8 +167,19 @@ public class Person implements Serializable {
      *
      * @return the date
      */
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        String date_string;
+
+        if (!date.equals(null)){
+            date_string= dateFormat.format(date);
+        }
+        else{
+            return "";
+        }
+
+        return dateFormat.format(date);
+
     }
 
     /**

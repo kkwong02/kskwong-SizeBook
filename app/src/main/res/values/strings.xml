@@ -3,7 +3,7 @@
     <string name="add_record">Add Record</string>
     <string name="view_record">View Record</string>
     <string name="edit">Edit</string>
-    <string name="finish">Add</string>
+    <string name="finish">Save</string>
     <string name="cancel">Cancel</string>
     <string name="name">Name</string>
     <string name="date">Date taken (yyyy-mm-dd) </string>

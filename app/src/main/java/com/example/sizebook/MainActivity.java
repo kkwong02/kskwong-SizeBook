@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             records = gson.fromJson(in, new TypeToken<ArrayList<Person>>(){}.getType());
 
             fis.close();
+
         } catch (FileNotFoundException e) {
             // empty array if file does not exist.
             records = new ArrayList<Person>();
@@ -112,8 +113,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+        //FIXME: loading from json file
 
-        loadRecords();
+//        loadRecords();
 
         adapter = new ArrayAdapter<Person>(this, R.layout.record_list_item, records);
         record_list.setAdapter(adapter);
