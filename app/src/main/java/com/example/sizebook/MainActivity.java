@@ -29,8 +29,7 @@ import java.util.ArrayList;
 
 /*
  * This is the main screen of the app where records are listed. Users can select records to view or
- * add a new record from this activity.
- *
+ * add a new record from this activity. Operations that modify the records are not done here.
  */
 public class MainActivity extends AppCompatActivity {
     private static final String FILENAME = "sizeBook.sav";
@@ -50,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         record_list = (ListView) findViewById(R.id.record_list);
 
         Button newRecord = (Button) findViewById(R.id.add_record);
@@ -65,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
 
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-
     }
 
     private void addRecord(View view) {
         Intent createRecord = new Intent(this, AddRecord.class);
+        createRecord.putExtra("records", records); // pass records array to add
         startActivity(createRecord);
     }
 
@@ -92,28 +90,6 @@ public class MainActivity extends AppCompatActivity {
             records = new ArrayList<Person>();
         } catch (IOException e) {
             throw new RuntimeException();
-        }
-    }
-
-    private void saveRecords() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-            Gson gson = new Gson();
-
-            gson.toJson(records, out);
-
-            out.flush(); // flush the writer
-
-            fos.close(); // close output steam
-        }
-
-        catch (FileNotFoundException e) {
-            throw new RuntimeException();
-        }
-        catch (IOException e){
-            throw new  RuntimeException();
         }
     }
 
