@@ -1,114 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <!--name-->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-        <LinearLayout
+        <include layout="@layout/activity_record_form"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="@string/delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:id="@+id/delete" />
 
-            <EditText
-                android:id="@+id/edit_name"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="@string/name"
-                android:layout_width="match_parent" />
-            <!--date-->
-            <EditText
-                android:id="@+id/edit_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="date"
-                android:hint="@string/date" />
+    </LinearLayout>
 
-            <!--neck-->
-            <EditText
-                android:id="@+id/edit_neck"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:hint="@string/neck" />
-
-            <!--bust-->
-            <EditText
-                android:id="@+id/edit_bust"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:hint="@string/bust" />
-
-            <!--chest-->
-            <EditText
-                android:id="@+id/edit_chest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:hint="@string/chest" />
-
-            <!--waist-->
-            <EditText
-                android:id="@+id/edit_waist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:hint="@string/waist" />
-
-            <!--hip-->
-            <EditText
-                android:id="@+id/edit_hip"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:hint="@string/hip" />
-
-            <!--inseam-->
-            <EditText
-                android:id="@+id/edit_inseam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:hint="@string/inseam" />
-
-            <!--comments-->
-            <EditText
-                android:id="@+id/edit_comments"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:hint="@string/comment" />
-        </LinearLayout>
-    </ScrollView>
-
-
-    <Button
-        android:id="@+id/save_edit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/finish"
-        android:layout_marginTop="20dp"/>
-
-    <Button
-        android:text="@string/delete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/delete" />
-
-</LinearLayout>
+</merge>
