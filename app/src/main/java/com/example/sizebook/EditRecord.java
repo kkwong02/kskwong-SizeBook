@@ -50,7 +50,6 @@ public class EditRecord extends RecordForm {
                     Person person = readInputFields(name_field.getText().toString());
                     if (person != null) {
                         records.set(item_index, person);
-                        saveRecords(records);
                         finish();
                     }
                 }
@@ -61,7 +60,7 @@ public class EditRecord extends RecordForm {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                records.remove(item_index);
+                deleteRecord(item_index);
                 saveRecords(records);
                 finish();
             }
@@ -122,6 +121,11 @@ public class EditRecord extends RecordForm {
         if(comment != null){
             comment.setText(record.getComment());
         }
+    }
+
+    private void deleteRecord(int index){
+        records.remove(index);
+        saveRecords(records);
     }
 
 }
