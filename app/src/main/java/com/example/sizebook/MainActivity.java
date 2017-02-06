@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
         // record counter
         TextView count = (TextView) findViewById(R.id.num_record);
-        count.setText("Number of records: " + Integer.toString(records.size()));
+        count.setText(String.format("Number of records: %s", Integer.toString(records.size())));
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.

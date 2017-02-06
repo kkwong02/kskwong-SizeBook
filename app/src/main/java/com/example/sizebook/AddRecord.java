@@ -96,7 +96,7 @@ public class AddRecord extends AppCompatActivity {
 
         // chest
         if (!chest.getText().toString().equals("")){
-            Measurement chest_dim = new Measurement(Float.parseFloat(neck.getText().toString()));
+            Measurement chest_dim = new Measurement(Float.parseFloat(chest.getText().toString()));
             record.setChest(chest_dim);
         }
 
