@@ -20,7 +20,8 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 /**
- * In this activity, the user can fill the form to add a new record.
+ * In this activity, the user can fill the form to add a new record. This extends the RecordForm
+ * abstract class because it shares a similar layout and methods with EditRecord.
  */
 public class AddRecord extends RecordForm {
     private ArrayList<Person> records;

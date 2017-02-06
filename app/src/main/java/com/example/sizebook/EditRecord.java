@@ -18,6 +18,10 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 
+/**
+ * This activity allows users to edit and delete records. This exteneds the RecordForm abstract class
+ * to avoid redundant methods that are shared between AddRecord and Edit Record.
+ */
 public class EditRecord extends RecordForm {
     private ArrayList<Person> records;
     private int item_index;
@@ -25,7 +29,7 @@ public class EditRecord extends RecordForm {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_record_form);
+        setContentView(R.layout.activity_edit_record);
 
         Intent intent = getIntent();
 
@@ -53,15 +57,15 @@ public class EditRecord extends RecordForm {
             }
         });
 
-//        Button delete = (Button) findViewById(R.id.delete);
-//        delete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                records.remove(item_index);
-//                saveRecords();
-//                finish();
-//            }
-//        });
+        Button delete = (Button) findViewById(R.id.delete);
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                records.remove(item_index);
+                saveRecords(records);
+                finish();
+            }
+        });
     }
 
     @Override

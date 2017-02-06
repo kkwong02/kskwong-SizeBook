@@ -16,7 +16,8 @@ import java.util.ArrayList;
 
 /**
  * AddRecord and EditRecord have a very similar layout and common methods. The methods they have
- * in common are implemented here.
+ * in common are implemented here to avoid redundancy. This also allows easier implementation of
+ * new measurement fields in the future.
  */
 public abstract class RecordForm extends AppCompatActivity {
     private static final String FILENAME = "sizeBook.sav";
