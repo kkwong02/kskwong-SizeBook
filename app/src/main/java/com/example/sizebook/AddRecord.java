@@ -23,8 +23,8 @@ import java.util.ArrayList;
  * In this activity, the user can fill the form to add a new record.
  */
 public class AddRecord extends AppCompatActivity {
-    private static final String FILENAME = "sizeBook.sav";
     private ArrayList<Person> records;
+    private static final String FILENAME = "sizeBook.sav";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class AddRecord extends AppCompatActivity {
         });
     }
 
-    public Person readInputFields(String name){
+    private Person readInputFields(String name){
         Person record = new Person(name);
 
         // getting all the text from all the EditTexts
@@ -83,7 +83,7 @@ public class AddRecord extends AppCompatActivity {
                 record.setDate(date_string);
             }
             else{
-                date.setError("Invaid Format");
+                date.setError("Invalid Format");
                 return null;
             }
         }
@@ -133,7 +133,7 @@ public class AddRecord extends AppCompatActivity {
     }
 
     // save new record to file
-    public void saveRecords() {
+    private void saveRecords() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
 

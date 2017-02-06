@@ -1,9 +1,8 @@
 package com.example.sizebook;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +15,6 @@ import java.util.ArrayList;
  */
 
 public class ViewRecord extends AppCompatActivity {
-    private Person record;
     private ArrayList<Person> records;
     private int item_index;
 
@@ -24,9 +22,6 @@ public class ViewRecord extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_record);
-
-        ArrayList<Person> records;
-        final int item_index;
 
         Intent intent = getIntent();
 
@@ -40,16 +35,20 @@ public class ViewRecord extends AppCompatActivity {
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editRecord(item_index);
+                editRecord();
+                finish();
             }
         });
     }
 
-    private void editRecord(int index){
-        Intent intent = new Intent();
+    private void editRecord() {
+        Intent intent = new Intent(this, EditRecord.class);
+        intent.putExtra("index", item_index);
+        intent.putExtra("records", records);
+        startActivity(intent);
     }
 
-    private void loadValues(Person record){
+    private void loadValues(Person record) {
         String num_format = "%.1f";
 
         TextView name = (TextView) findViewById(R.id.name_field);
@@ -95,8 +94,8 @@ public class ViewRecord extends AppCompatActivity {
                     + " inches");
         }
 
-        if (record.getComment() != null){
-            comment.setText("Comment: " + record.getComment());
+        if (record.getComment() != null) {
+            comment.setText(String.format("Comment: %s", record.getComment()));
         }
     }
 
